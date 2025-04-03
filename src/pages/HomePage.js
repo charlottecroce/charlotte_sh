@@ -41,12 +41,12 @@ const HomePage = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <ProjectCard
             title="Champlain Tech Journals"
-            description="Notes, code, and lab write-ups from my Champlain College courses"
+            description="Notes, code, and lab write-ups from my Champlain College courses. Probably a useful resource if you also go here."
             sourceUrl="https://codeberg.org/charlottecroce/ChamplainTechJournals"
           />
           <ProjectCard
             title="Nøkken Health"
-            description="A mobile app to track and analyze health data"
+            description="A mobile app to track and analyze health data. Track medications, bloodwork, symptoms, and more. Made with Flutter"
             sourceUrl="https://codeberg.org/charlottecroce/nokken"
           />
         </div>
