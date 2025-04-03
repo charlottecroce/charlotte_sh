@@ -1,0 +1,557 @@
+/* 
+==============================================
+TABLE OF CONTENTS
+==============================================
+1. CSS Variables
+2. Base Styles
+3. Typography
+4. Layout & Container
+5. Navigation & Header
+6. Mobile Menu
+7. Button & Controls
+8. Form Elements
+9. Cards & Panels
+10. Animations
+11. Dark Mode
+12. Utility Classes
+13. Media Queries
+==============================================
+*/
+
+/* 
+==============================================
+1. CSS Variables
+==============================================
+*/
+:root {
+    --color-pink-50: #FFF0F5;
+    --color-pink-100: #FFE0EB;
+    --color-pink-200: #FFB8D9;
+    --color-pink-300: #FF8AC8;
+    --color-pink-400: #F45D9E;
+    --color-pink-500: #D23B80;
+    --color-sage-200: #D4E6D5;
+    --color-sage-300: #B5D4B7;
+    --color-sage-400: #8AB68C;
+    --color-sage-500: #6A9A6C;
+    --color-cream-50: #FFFEF5;
+    --color-cream-100: #FFF9F0;
+  }
+  
+  /* 
+  ==============================================
+  2. Base Styles
+  ==============================================
+  */
+  * {
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', 'Roboto', 'Oxygen', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: var(--color-pink-50);
+    color: #4a4a4a;
+    line-height: 1.6;
+  }
+  
+  /* 
+  ==============================================
+  3. Typography
+  ==============================================
+  */
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    color: var(--color-pink-400);
+    margin-bottom: 1.5rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    color: var(--color-sage-400);
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+    color: var(--color-pink-400);
+    margin-bottom: 0.5rem;
+  }
+  
+  a {
+    color: var(--color-pink-400);
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: var(--color-sage-400);
+    text-decoration: underline;
+  }
+  
+  .text-xl {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .text-lg {
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* 
+  ==============================================
+  4. Layout & Container
+  ==============================================
+  */
+  .app-container {
+    min-height: 100vh;
+    padding-top: 80px;
+    background-color: var(--color-pink-50);
+    color: #4a4a4a;
+  }
+  
+  .main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .site-footer {
+    padding: 24px;
+    margin-top: 80px;
+    background-color: var(--color-pink-100);
+    text-align: center;
+  }
+  
+  .social-footer-links {
+    margin-bottom: 16px;
+  }
+  
+  .footer-separator {
+    margin: 0 8px;
+  }
+  
+  /* 
+  ==============================================
+  5. Navigation & Header
+  ==============================================
+  */
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    background-color: var(--color-pink-50);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+  }
+  
+  .navbar-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar-logo {
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: var(--color-pink-400);
+  }
+  
+  .navbar-links {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: flex-end;
+    margin-left: auto;
+  }
+  
+  .ml-1 {
+    margin-left: 0.25rem;
+  }
+  
+  /* 
+  ==============================================
+  6. Mobile Menu
+  ==============================================
+  */
+  .mobile-menu {
+    position: fixed;
+    top: 64px;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-pink-50);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    z-index: 999;
+    display: none;
+    border-top: 1px solid var(--color-pink-200);
+  }
+  
+  .mobile-menu.open {
+    display: block;
+  }
+  
+  .mobile-menu-container {
+    padding: 12px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .mobile-menu-toggle {
+    display: none;
+  }
+  
+  /* 
+  ==============================================
+  7. Button & Controls
+  ==============================================
+  */
+  button {
+    padding: 0.5rem 1rem;
+    border-radius: 0.75rem;
+    border: none;
+    background-color: var(--color-sage-400);
+    color: white;
+    font-weight: 500;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: var(--color-sage-500);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-button {
+    border-radius: 9999px;
+    background-color: var(--color-sage-200);
+    padding: 8px 16px;
+    border: none;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    color: #4a4a4a;
+  }
+  
+  .navbar-button:hover {
+    background-color: var(--color-pink-200);
+  }
+  
+  .icon-button {
+    border-radius: 9999px;
+    background-color: var(--color-pink-100);
+    padding: 8px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+  }
+  
+  .icon-button:hover {
+    background-color: var(--color-pink-200);
+  }
+  
+  .mobile-button {
+    border-radius: 9999px;
+    background-color: var(--color-pink-100);
+    padding: 8px 16px;
+    border: none;
+    width: 100%;
+    text-align: left;
+    transition: all 0.2s ease;
+    color: #4a4a4a;
+  }
+  
+  .mobile-button:hover {
+    background-color: var(--color-pink-200);
+  }
+  
+  .mobile-button.active {
+    background-color: var(--color-pink-300);
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  }
+  
+  .mobile-button-with-icon {
+    display: flex;
+    align-items: center;
+  }
+  
+  .icon-left {
+    margin-right: 8px;
+  }
+  
+  .icon-small {
+    width: 14px;
+    height: 14px;
+  }
+  
+  /* 
+  ==============================================
+  8. Form Elements
+  ==============================================
+  */
+  /* No styles defined yet */
+  
+  /* 
+  ==============================================
+  9. Cards & Panels
+  ==============================================
+  */
+  .intro-section {
+    position: relative;
+    border-radius: 0.75rem;
+    margin-bottom: 3rem;
+    background-color: white;
+    overflow: hidden;
+  }
+  
+  .intro-content {
+    padding: 2rem;
+  }
+  
+  .intro-text {
+    max-width: 48rem;
+    margin: 0 auto;
+  }
+  
+  .projects-section {
+    margin-bottom: 4rem;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .title-line {
+    flex-grow: 1;
+    height: 1px;
+    margin-left: 1rem;
+    background: linear-gradient(to right, var(--color-pink-200), transparent);
+  }
+  
+  .projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .project-card {
+    border-radius: 0.5rem;
+    background-color: white;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    margin-bottom: 1.5rem;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  }
+  
+  .card-content {
+    padding: 0.75rem;
+  }
+  
+  .card-content p {
+    margin-bottom: 0.5rem;
+  }
+  
+  .source-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.875rem;
+  }
+  
+  .source-link:hover {
+    color: var(--color-pink-400);
+    transform: scale(1.05);
+  }
+  
+  .text-sage {
+    color: var(--color-sage-400);
+  }
+  
+  /* 
+  ==============================================
+  10. Animations
+  ==============================================
+  */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  .animate-float {
+    animation: float 8s ease-in-out infinite;
+  }
+  
+  /* 
+  ==============================================
+  11. Dark Mode
+  ==============================================
+  */
+  .dark-mode {
+    --color-pink-50: #3A2A35;
+    --color-pink-100: #59354B;
+    --color-pink-200: #8E5773;
+    --color-pink-300: #B47A93;
+    --color-pink-400: #D7A1B8;
+    --color-pink-500: #E9C3D3;
+    --color-sage-300: #7BA97D;
+    --color-sage-400: #5D8F5F;
+    --color-sage-500: #456E47;
+    --color-cream-50: #2C2C27;
+    --color-cream-100: #3A3A33;
+  }
+  
+  .dark-mode body {
+    background-color: #1a202c;
+    color: #f7fafc;
+  }
+  
+  .dark-mode h1,
+  .dark-mode h3 {
+    color: var(--color-pink-400);
+  }
+  
+  .dark-mode h2 {
+    color: var(--color-sage-300);
+  }
+  
+  .dark-mode .text-sage {
+    color: var(--color-sage-300);
+  }
+  
+  .dark-mode .title-line {
+    background: linear-gradient(to right, var(--color-pink-400), transparent);
+  }
+  
+  .dark-mode .app-container {
+    background-color: #1a202c;
+    color: #f7fafc;
+  }
+  
+  .dark-mode .navbar {
+    background-color: #1a202c;
+  }
+  
+  .dark-mode .site-footer {
+    background-color: #2d3748;
+  }
+  
+  .dark-mode .mobile-menu {
+    background-color: #1a202c;
+    border-top: 1px solid var(--color-pink-300);
+  }
+  
+  .dark-mode .intro-section,
+  .dark-mode .project-card {
+    background-color: #2d3748;
+    border-color: var(--color-sage-400);
+  }
+  
+  .dark-mode button {
+    background-color: var(--color-sage-400);
+  }
+  
+  .dark-mode button:hover {
+    background-color: var(--color-pink-300);
+  }
+  
+  .dark-mode .navbar-button,
+  .dark-mode .mobile-button {
+    background-color: #2d3748;
+    color: #f7fafc;
+  }
+  
+  .dark-mode .navbar-button:hover,
+  .dark-mode .mobile-button:hover {
+    background-color: var(--color-pink-300);
+  }
+  
+  .dark-mode .icon-button {
+    background-color: #2d3748;
+  }
+  
+  .dark-mode .icon-button:hover {
+    background-color: var(--color-pink-300);
+  }
+  
+  /* 
+  ==============================================
+  12. Utility Classes
+  ==============================================
+  */
+  /* Additional utility classes included above with relevant components */
+  
+  /* 
+  ==============================================
+  13. Media Queries
+  ==============================================
+  */
+  @media (max-width: 767px) {
+    .navbar-links {
+      display: none;
+    }
+    
+    .mobile-menu-toggle {
+      display: flex;
+    }
+    
+    h1 {
+      font-size: 2.25rem;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .mobile-menu {
+      display: none !important;
+    }
+    
+    .projects-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .intro-content {
+      padding: 3rem;
+    }
+    
+    h1 {
+      font-size: 3rem;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .projects-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }

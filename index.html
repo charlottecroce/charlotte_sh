@@ -1,1 +1,195 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"/><link rel="icon" href="/charlotte_sh/favicon.ico"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#000000"/><meta name="description" content="Charlotte Croce's personal website"/><link rel="apple-touch-icon" href="/charlotte_sh/logo192.png"/><link rel="manifest" href="/charlotte_sh/manifest.json"/><title>charlotte.sh</title><script defer="defer" src="/charlotte_sh/static/js/main.e1f52c41.js"></script><link href="/charlotte_sh/static/css/main.9c66e5c4.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>./charlotte.sh</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Lucide icons via CDN -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+  <div class="app-container">
+    <!-- Navbar -->
+    <header class="navbar">
+      <div class="navbar-container">
+        <div class="navbar-logo">
+          ./charlotte.sh
+        </div>
+        
+        <!-- Desktop Navigation Links -->
+        <div class="navbar-links">
+          <button class="navbar-button" onclick="openSocialLink('https://github.com/charlottecroce')">
+            GitHub <i data-lucide="external-link" class="ml-1"></i>
+          </button>
+          <button class="navbar-button" onclick="openSocialLink('https://codeberg.org/charlottecroce')">
+            Codeberg <i data-lucide="external-link" class="ml-1"></i>
+          </button>
+          <button class="navbar-button" onclick="openSocialLink('https://linkedin.com/in/charlottecroce')">
+            LinkedIn <i data-lucide="external-link" class="ml-1"></i>
+          </button>
+          <button class="navbar-button" onclick="openSocialLink('https://hachyderm.io/@charlotte200')">
+            Mastodon <i data-lucide="external-link" class="ml-1"></i>
+          </button>
+          <button onclick="toggleDarkMode()" aria-label="Toggle dark mode" class="icon-button">
+            <i data-lucide="moon" id="moon-icon"></i>
+            <i data-lucide="sun" id="sun-icon" style="display: none;"></i>
+          </button>
+        </div>
+        
+        <!-- Mobile Menu Button -->
+        <button class="icon-button mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle menu">
+          <i data-lucide="menu" id="menu-icon"></i>
+          <i data-lucide="x" id="close-icon" style="display: none;"></i>
+        </button>
+      </div>
+    </header>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+      <div class="mobile-menu-container">
+        <button class="mobile-button" onclick="openSocialLink('https://github.com/charlottecroce')">
+          GitHub
+        </button>
+        <button class="mobile-button" onclick="openSocialLink('https://codeberg.org/charlottecroce')">
+          Codeberg
+        </button>
+        <button class="mobile-button" onclick="openSocialLink('https://linkedin.com/in/charlottecroce')">
+          LinkedIn
+        </button>
+        <button class="mobile-button" onclick="openSocialLink('https://hachyderm.io/@charlotte200')">
+          Mastodon
+        </button>
+        <button onclick="toggleDarkMode()" class="mobile-button mobile-button-with-icon">
+          <i data-lucide="moon" class="icon-left" id="mobile-moon-icon"></i>
+          <i data-lucide="sun" class="icon-left" id="mobile-sun-icon" style="display: none;"></i>
+          <span id="dark-mode-text">Dark Mode</span>
+        </button>
+      </div>
+    </div>
+    
+    <!-- Main Content -->
+    <main class="main-content">
+      <div>
+        <!-- Intro Section -->
+        <div class="intro-section">
+          <div class="intro-content">
+            <div class="intro-text">
+              <h1>Hi! I'm Charlotte</h1>
+              <p class="text-xl">I put stuff here</p>
+              <p class="text-lg">something else</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Projects Section -->
+        <div class="projects-section">
+          <h2 class="section-title">
+            <span class="text-sage">Projects</span>
+            <span class="title-line"></span>
+          </h2>
+          <div class="projects-grid">
+            <div class="project-card">
+              <div class="card-content">
+                <h3>Champlain Tech Journals</h3>
+                <p>Notes, code, and lab write-ups from my Champlain College courses. Probably a useful resource if you also go here.</p>
+                <a href="https://codeberg.org/charlottecroce/ChamplainTechJournals" target="_blank" rel="noopener noreferrer" class="source-link">
+                  <span>Source Code</span>
+                  <i data-lucide="external-link" class="icon-small"></i>
+                </a>
+              </div>
+            </div>
+            <div class="project-card">
+              <div class="card-content">
+                <h3>Nøkken Health</h3>
+                <p>A mobile app to track and analyze health data. Track medications, bloodwork, symptoms, and more. Made with Flutter</p>
+                <a href="https://codeberg.org/charlottecroce/nokken" target="_blank" rel="noopener noreferrer" class="source-link">
+                  <span>Source Code</span>
+                  <i data-lucide="external-link" class="icon-small"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="social-footer-links">
+        <a href="https://github.com/charlottecroce" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub</a>
+        <span class="footer-separator">•</span>
+        <a href="https://codeberg.org/charlottecroce" target="_blank" rel="noopener noreferrer" class="footer-link">Codeberg</a>
+        <span class="footer-separator">•</span>
+        <a href="https://linkedin.com/in/charlottecroce" target="_blank" rel="noopener noreferrer" class="footer-link">LinkedIn</a>
+        <span class="footer-separator">•</span>
+        <a href="https://hachyderm.io/@charlotte200" target="_blank" rel="noopener noreferrer" class="footer-link">Mastodon</a>
+      </div>
+      <p>©<span id="current-year"></span> Charlotte Croce</p>
+    </footer>
+  </div>
+
+  <script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+    
+    // Set current year in footer
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+    
+    // Dark mode toggle
+    function toggleDarkMode() {
+      const body = document.body;
+      const isDarkMode = body.classList.toggle('dark-mode');
+      
+      // Update icon visibility
+      document.getElementById('moon-icon').style.display = isDarkMode ? 'none' : 'block';
+      document.getElementById('sun-icon').style.display = isDarkMode ? 'block' : 'none';
+      document.getElementById('mobile-moon-icon').style.display = isDarkMode ? 'none' : 'block';
+      document.getElementById('mobile-sun-icon').style.display = isDarkMode ? 'block' : 'none';
+      
+      // Update text
+      document.getElementById('dark-mode-text').textContent = isDarkMode ? 'Light Mode' : 'Dark Mode';
+    }
+    
+    // Mobile menu toggle
+    function toggleMobileMenu() {
+      const mobileMenu = document.getElementById('mobile-menu');
+      const isOpen = mobileMenu.classList.toggle('open');
+      
+      // Update icon visibility
+      document.getElementById('menu-icon').style.display = isOpen ? 'none' : 'block';
+      document.getElementById('close-icon').style.display = isOpen ? 'block' : 'none';
+    }
+    
+    // Open social links
+    function openSocialLink(url) {
+      window.open(url, '_blank', 'noopener,noreferrer');
+      
+      // Close mobile menu if open
+      const mobileMenu = document.getElementById('mobile-menu');
+      if (mobileMenu.classList.contains('open')) {
+        toggleMobileMenu();
+      }
+    }
+    
+    // Handle mobile menu on window resize
+    window.addEventListener('resize', function() {
+      const isMobile = window.innerWidth < 768;
+      const mobileMenu = document.getElementById('mobile-menu');
+      
+      // Close mobile menu on desktop
+      if (!isMobile && mobileMenu.classList.contains('open')) {
+        mobileMenu.classList.remove('open');
+        document.getElementById('menu-icon').style.display = 'block';
+        document.getElementById('close-icon').style.display = 'none';
+      }
+      
+      // Show/hide mobile menu toggle button
+      document.querySelector('.mobile-menu-toggle').style.display = isMobile ? 'flex' : 'none';
+    });
+    
+    // Initial setup
+    document.querySelector('.mobile-menu-toggle').style.display = window.innerWidth < 768 ? 'flex' : 'none';
+  </script>
+</body>
+</html>
