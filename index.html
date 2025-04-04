@@ -1,51 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>./charlotte.sh</title>
+  <title>Charlotte Croce - ./charlotte.sh</title>
   <link rel="stylesheet" href="style.css">
-  <!-- Lucide icons via CDN -->
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 </head>
+
 <body>
+  <a href="#main-content" class="skip-to-content">Skip to main content</a>
   <div class="app-container">
-    <!-- Navbar -->
     <header class="navbar">
       <div class="navbar-container">
         <div class="navbar-logo">
           ./charlotte.sh
         </div>
-        
-        <!-- Desktop Navigation Links -->
         <div class="navbar-links">
           <button class="navbar-button" onclick="openSocialLink('https://github.com/charlottecroce')">
-            GitHub <i data-lucide="external-link" class="ml-1"></i>
+            GitHub <i data-lucide="external-link" class="ml-1" aria-hidden="true"></i>
+            <span class="sr-only">(opens in new tab)</span>
           </button>
           <button class="navbar-button" onclick="openSocialLink('https://codeberg.org/charlottecroce')">
-            Codeberg <i data-lucide="external-link" class="ml-1"></i>
+            Codeberg <i data-lucide="external-link" class="ml-1" aria-hidden="true"></i>
+            <span class="sr-only">(opens in new tab)</span>
           </button>
           <button class="navbar-button" onclick="openSocialLink('https://linkedin.com/in/charlottecroce')">
-            LinkedIn <i data-lucide="external-link" class="ml-1"></i>
+            LinkedIn <i data-lucide="external-link" class="ml-1" aria-hidden="true"></i>
+            <span class="sr-only">(opens in new tab)</span>
           </button>
           <button class="navbar-button" onclick="openSocialLink('https://hachyderm.io/@charlotte200')">
-            Mastodon <i data-lucide="external-link" class="ml-1"></i>
+            Mastodon <i data-lucide="external-link" class="ml-1" aria-hidden="true"></i>
+            <span class="sr-only">(opens in new tab)</span>
           </button>
           <button onclick="toggleDarkMode()" aria-label="Toggle dark mode" class="icon-button">
-            <i data-lucide="moon" id="moon-icon"></i>
-            <i data-lucide="sun" id="sun-icon" style="display: none;"></i>
+            <i data-lucide="moon" id="moon-icon" aria-hidden="true"></i>
+            <i data-lucide="sun" id="sun-icon" style="display: none;" aria-hidden="true"></i>
           </button>
         </div>
-        
-        <!-- Mobile Menu Button -->
         <button class="icon-button mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle menu">
-          <i data-lucide="menu" id="menu-icon"></i>
-          <i data-lucide="x" id="close-icon" style="display: none;"></i>
+          <i data-lucide="menu" id="menu-icon" aria-hidden="true"></i>
+          <i data-lucide="x" id="close-icon" style="display: none;" aria-hidden="true"></i>
         </button>
       </div>
     </header>
-    
-    <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobile-menu">
       <div class="mobile-menu-container">
         <button class="mobile-button" onclick="openSocialLink('https://github.com/charlottecroce')">
@@ -67,11 +66,8 @@
         </button>
       </div>
     </div>
-    
-    <!-- Main Content -->
     <main class="main-content">
       <div>
-        <!-- Intro Section -->
         <div class="intro-section">
           <div class="intro-content">
             <div class="intro-text">
@@ -81,8 +77,6 @@
             </div>
           </div>
         </div>
-        
-        <!-- Projects Section -->
         <div class="projects-section">
           <h2 class="section-title">
             <span class="text-sage">Projects</span>
@@ -93,9 +87,11 @@
               <div class="card-content">
                 <h3>Champlain Tech Journals</h3>
                 <p>Notes, code, and lab write-ups from my Champlain College courses</p>
-                <a href="https://codeberg.org/charlottecroce/ChamplainTechJournals" target="_blank" rel="noopener noreferrer" class="source-link">
+                <a href="https://codeberg.org/charlottecroce/ChamplainTechJournals" target="_blank"
+                  rel="noopener noreferrer" class="source-link">
                   <span>Source Code</span>
-                  <i data-lucide="external-link" class="icon-small"></i>
+                  <i data-lucide="external-link" class="icon-small" aria-hidden="true"></i>
+                  <span class="sr-only">(opens in new tab)</span>
                 </a>
               </div>
             </div>
@@ -103,9 +99,12 @@
               <div class="card-content">
                 <h3>Nøkken Health</h3>
                 <p>A Flutter app to track and analyze health data</p>
-                <a href="https://codeberg.org/charlottecroce/nokken" target="_blank" rel="noopener noreferrer" class="source-link">
+                <a href="https://codeberg.org/charlottecroce/nokken" target="_blank" rel="noopener noreferrer"
+                  class="source-link">
+                  class="source-link">
                   <span>Source Code</span>
-                  <i data-lucide="external-link" class="icon-small"></i>
+                  <i data-lucide="external-link" class="icon-small" aria-hidden="true"></i>
+                  <span class="sr-only">(opens in new tab)</span>
                 </a>
               </div>
             </div>
@@ -113,84 +112,69 @@
         </div>
       </div>
     </main>
-    
-    <!-- Footer -->
     <footer class="site-footer">
       <div class="social-footer-links">
-        <a href="https://github.com/charlottecroce" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub</a>
+        <a href="https://github.com/charlottecroce" target="_blank" rel="noopener noreferrer"
+          class="footer-link">GitHub</a>
         <span class="footer-separator">•</span>
-        <a href="https://codeberg.org/charlottecroce" target="_blank" rel="noopener noreferrer" class="footer-link">Codeberg</a>
+        <a href="https://codeberg.org/charlottecroce" target="_blank" rel="noopener noreferrer"
+          class="footer-link">Codeberg</a>
         <span class="footer-separator">•</span>
-        <a href="https://linkedin.com/in/charlottecroce" target="_blank" rel="noopener noreferrer" class="footer-link">LinkedIn</a>
+        <a href="https://linkedin.com/in/charlottecroce" target="_blank" rel="noopener noreferrer"
+          class="footer-link">LinkedIn</a>
         <span class="footer-separator">•</span>
-        <a href="https://hachyderm.io/@charlotte200" target="_blank" rel="noopener noreferrer" class="footer-link">Mastodon</a>
+        <a href="https://hachyderm.io/@charlotte200" target="_blank" rel="noopener noreferrer"
+          class="footer-link">Mastodon</a>
       </div>
+      <p class="sr-only">Trans pride flag colors</p>
       <p>#55CDFC#F7A8B8#FFFFFF#F7A8B8#55CDFC</p>
       <p>©<span id="current-year"></span> Charlotte Croce</p>
     </footer>
   </div>
 
   <script>
-    // Initialize Lucide icons
     lucide.createIcons();
-    
-    // Set current year in footer
+
     document.getElementById('current-year').textContent = new Date().getFullYear();
-    
-    // Dark mode toggle
+
     function toggleDarkMode() {
       const body = document.body;
       const isDarkMode = body.classList.toggle('dark-mode');
-      
-      // Update icon visibility
       document.getElementById('moon-icon').style.display = isDarkMode ? 'none' : 'block';
       document.getElementById('sun-icon').style.display = isDarkMode ? 'block' : 'none';
       document.getElementById('mobile-moon-icon').style.display = isDarkMode ? 'none' : 'block';
       document.getElementById('mobile-sun-icon').style.display = isDarkMode ? 'block' : 'none';
-      
-      // Update text
       document.getElementById('dark-mode-text').textContent = isDarkMode ? 'Light Mode' : 'Dark Mode';
     }
-    
-    // Mobile menu toggle
+
     function toggleMobileMenu() {
       const mobileMenu = document.getElementById('mobile-menu');
       const isOpen = mobileMenu.classList.toggle('open');
-      
-      // Update icon visibility
       document.getElementById('menu-icon').style.display = isOpen ? 'none' : 'block';
       document.getElementById('close-icon').style.display = isOpen ? 'block' : 'none';
     }
-    
-    // Open social links
+
     function openSocialLink(url) {
       window.open(url, '_blank', 'noopener,noreferrer');
-      
-      // Close mobile menu if open
       const mobileMenu = document.getElementById('mobile-menu');
       if (mobileMenu.classList.contains('open')) {
         toggleMobileMenu();
       }
     }
-    
-    // Handle mobile menu on window resize
-    window.addEventListener('resize', function() {
+
+    window.addEventListener('resize', function () {
       const isMobile = window.innerWidth < 768;
       const mobileMenu = document.getElementById('mobile-menu');
-      
-      // Close mobile menu on desktop
       if (!isMobile && mobileMenu.classList.contains('open')) {
         mobileMenu.classList.remove('open');
         document.getElementById('menu-icon').style.display = 'block';
         document.getElementById('close-icon').style.display = 'none';
       }
-      
-      // Show/hide mobile menu toggle button
       document.querySelector('.mobile-menu-toggle').style.display = isMobile ? 'flex' : 'none';
     });
-    
-    // Initial setup
+
     document.querySelector('.mobile-menu-toggle').style.display = window.innerWidth < 768 ? 'flex' : 'none';
   </script>
 </body>
+
 </html>
